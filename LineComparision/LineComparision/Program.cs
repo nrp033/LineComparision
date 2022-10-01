@@ -1,4 +1,6 @@
-﻿namespace LineComparision
+﻿using System.Collections.Generic;
+
+namespace LineComparision
 {
     internal class Program
     {
@@ -24,16 +26,22 @@
             y2 = Convert.ToInt32(Console.ReadLine());
             int length2 = Length(x1, y1, x2, y2);
 
-            if (length1.Equals(length2) == true)
+            if (length1.Equals(length2) )
             {
                 Console.WriteLine("Lines are Equal !");
-
+            }
+            else if (length1.CompareTo(length2) > 0)
+            {
+                Console.WriteLine("Line 1 is Greater !");
             }
             else
             {
-                Console.WriteLine("Lines are Not Equal ");
+                Console.WriteLine("Line 2 Greater !");
+
             }
-            
+
+
+
             Console.ReadKey();
 
         }
